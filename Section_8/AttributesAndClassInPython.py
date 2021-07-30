@@ -1,44 +1,37 @@
-class Dog:
-    age = 2
+class Heroes():
 
-    def __init__(self, color, trick, name):
-        self.color = color
-        self.trick = trick
+    classS = 'S'
+    classA = 'A'
+    classB = 'B'
+    classC = 'C'
+
+    heroes = ["1 - Blast", "2 - Tatsumaki", "3 - Silver Fang", "4 - Atomic Samurai", "5 - Child Emperor",
+                   "6 - Metal Knight", "7 - King",
+                   "8 - Zombieman", "9 - Drive Knight", "10 - Pig God", "11 - Superalloy Darkshine", "12 - Watchdog Man",
+                   "13 - Flashy Flash",
+                   "14 - Demon Cyborg", "15 - Metal Bat",
+                                        "16 - Tanktop Master", "17 - Puri-Puri Prisoner"]
+
+    def __init__(self, name, age, power, rank):
         self.name = name
+        self.age = age
 
-    def bark(self, attitude):
-        print("WOOF my name is {} and I {}. I am {}".format(self.name, self.trick, attitude))
+        self.power = power
+        self.rank = rank
 
+    def getinfo(self):
+        print(
+            "Name: {}\nAge: {}\nRank: {}\nPower: {}".format(self.name, self.age,  self.rank,
+                                                                       self.power))
 
-my_dog = Dog(color="Orange", trick="can eat a lot", name="Panther")
-my_dog.bark("Friendly")
-print(my_dog.name)
-
-
-class Circle():
-    pi = 3.14
-
-    def __init__(self, radius):
-        self.radius = radius
-
-    def get_circumference(self):
-        return self.radius * self.pi * 2
-
-
-my_circle = Circle(radius=5)
-print(my_circle.get_circumference())
+    # def list_of_heroes(self):
+    #     heroes = ["1 - Blast", "2 - Tatsumaki", "3 - Silver Fang", "4 - Atomic Samurai", "5 - Child Emperor",
+    #               "6 - Metal Knight", "7 - King",
+    #               "8 - Zombieman", "9 - Drive Knight", "10 - Pig God", "11 - Superalloy Darkshine", "12 - Watchdog Man",
+    #               "13 - Flashy Flash",
+    #               "14 - Demon Cyborg", "15 - Metal Bat",
+    #                                    "16 - Tanktop Master", "17 - Puri-Puri Prisoner"]
+    #     for x in heroes:
+    #         print(x)
 
 
-class Rectangle():
-
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
-
-    def area(self):
-        return self.length * self.width
-
-
-rectangle = Rectangle(length= 5, width=9)
-
-print(rectangle.area())
